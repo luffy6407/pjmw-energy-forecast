@@ -316,7 +316,7 @@ elif page == "Historical Analysis":
 
     yearly = (
         df["PJMW_MW"]
-        .resample("Y")
+        .resample("YE")
         .mean()
     )
 
