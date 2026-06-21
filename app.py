@@ -110,7 +110,7 @@ def forecast_future(days):
 
     forecast_df = pd.DataFrame({
         "Datetime": pd.date_range(
-            start=df.index[-1] + pd.Timedelta(hours=1),
+            start=pd.Timestamp.now().floor("h"),
             periods=future_hours,
             freq="h"
         ),
